@@ -1,140 +1,154 @@
 @extends('layouts.main')
 @section('content')
-    <nav aria-label="breadcrumb" class="breadcrumb-nav" style="padding-left: 10px; padding-right: 10px;">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="{{ route('home') }}">
-                        <i class="icon-home text-white"></i>
-                    </a>
-                </li>
-
-                <li class="breadcrumb-item active text-white" aria-current="page">
-                    Employer Form
-                </li>
-            </ol>
+    <section class="page-header">
+        <div class="page-header-bg" style="background-image: url({{ asset('data/employer.png') }})">
         </div>
-    </nav>
+        <div class="container">
+            <div class="page-header__inner">
+                <h2>Employer Form</h2>
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{ route('home') }}">Home</a></li>
+                    <li><span>-</span></li>
+                    <li class="active">Employer Form</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-
-    <div class="page-content">
+    <section class="checkout-page">
         <div class="container">
             <div class="row">
-                {{-- 
-                <div class="col-xl-4 col-lg-4 col-sm-4 py-5">
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/aIQvj-l5W2s"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
 
+                <div class="col-xl-6 col-lg-6">
+                    <div class="fx animated fadeInLeft" data-animate="fadeInLeft">
+                        <div class="alert  p-a-3" style="background-color: white;box-shadow: 5px 5px 6px 6px gray;">
+                            <div class="heading style3 m-b-3 sm">
+                                <h3 class="uppercase">What a client signs up for when partnering with us</h3>
+                            </div>
+                            <p>Top line candidate sourcing with the means of</p>
+                            <ul>
+                                <li>
+                                    Our Extensive database
+                                </li>
+                                <li>
+                                    Global Network
+                                </li>
+                                <li>
+                                    Social media outreach
+                                </li>
+                                <li>
+                                    Advertisements
+                                </li>
+                                <li>
+                                    Associates
+                                </li>
+                                <li>
+                                    Company job portal
+                                </li>
 
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/EVG-IH8cMYs"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                            </ul>
+                            <p>
+                                Multi-level screening of candidates which include
+                            </p>
+                            <ul>
+                                <li>
+                                    Telephonic interviews
+                                </li>
+                                <li>
+                                    Digital online interviews
+                                </li>
+                                <li>
+                                    Document checks and verification Trade testing Skill evaluation
+                                </li>
+                                <li>
+                                    Procurement of complete data &amp; documents.
+                                </li>
+                            </ul>
+                            <p>
+                                Post Interview quick and efficient deployment. Our services team instantly starts
+                            </p>
+                            <ul>
+                                <li>
+                                    Processing and procuring required documents
+                                </li>
+                                <li>
+                                    Visa application Fulfilling additional applications if applicable
+                                </li>
+                                <li>
+                                    Preparing candidates for departure Candidate briefing
+                                </li>
+                                <li>
+                                    Assistance in candidate departure and arrival documents.
+                                </li>
+                            </ul>
+                        </div>
 
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/Rry3xF_zc80"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                        <div class="heading style3">
+                            <h3>Documents Required</h3>
+                        </div>
 
-
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/O3PkV_4Rb2g"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-
-                    <iframe width="100%" height="250" src="https://www.youtube.com/embed/f4sLdhS1JAc"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div> --}}
-
-                <div class="col-xl-4 col-lg-4 col-sm-4 py-5">
-                    <h2 class="section-title categories-section-title heading-border border-0 ls-0 appear-animate"
-                        data-animation-delay="100" data-animation-name="fadeInUpShorter">
-                        Employer Form
-                    </h2>
-                    <center>
-                        <p style="font-size: 15px; color: black;" class="appear-animate" data-animation-delay="100"
-                            data-animation-name="fadeInUpShorter">
-                            Post a job and hire talent worker
-                        </p>
-                    </center>
-                    <br>
-
-                    <h4 class="animate__animated animate__bounce animate__rotateInDownLeft">
-                        Blessing Light Services Co.,Ltd
-                    </h4>
-
-                    <p style="font-size: 15px; color: black; text-align: justify" class="appear-animate"
-                        data-animation-delay="100" data-animation-name="fadeInUpShorter">
-                        A leading Manpower Recruiting Agency based in Myanmar, licensed and authorized by the
-                        Ministry of Labor, Employment and Social Security of Myanmar.
-                    </p>
-
-
-                    <h4 class="animate__animated animate__bounce animate__rotateInDownLeft">
-                        Our Expertise
-                    </h4>
-
-                    <p style="font-size: 15px; color: black; text-align: justify" class="appear-animate"
-                        data-animation-delay="100" data-animation-name="fadeInUpShorter">
-                        Our expertise stands on the Thailand, Malaysia, Singapore, Japan and Middle East Countries job
-                        market.
-                    </p>
-
-
-                    <h4 class="animate__animated animate__bounce animate__rotateInDownLeft">
-                        Our Operations
-                    </h4>
-
-                    <p style="font-size: 15px; color: black; text-align: justify" class="appear-animate"
-                        data-animation-delay="100" data-animation-name="fadeInUpShorter">
-                        Blessing Light Service’s operations are managed by a team of professionals.
-                    </p>
-
-
-                    <h4 class="animate__animated animate__bounce animate__rotateInDownLeft">
-                        Our Experience
-                    </h4>
-
-                    <p style="font-size: 15px; color: black; text-align: justify" class="appear-animate"
-                        data-animation-delay="100" data-animation-name="fadeInUpShorter">
-                        We could provide different level of employees on our client’s demand in various job categories
-                    </p>
+                        <div id="acc_10" class="accordion radius margin">
+                            <h6>
+                                As a recruitment organization, there’s certain documentation required from the clients end
+                                to
+                                procure workforce from Myanmar.
+                            </h6>
+                            <hr>
+                            <p>
+                                To help us find and expedite the recruitment of the personnel need by our overseas clients,
+                                we
+                                desire some documents from you. Document requirements vary from country to country. Hence it
+                                is
+                                important for your organization to check if you have gone through the necessary process.
+                            </p>
+                            <p>
+                                Kindly Register with Embassy through e-migrate system for recruitment.
+                                <a target="_blank" href="https://www.mol.gov.mm/my/" style="color: blue">
+                                    https://www.mol.gov.mm/my/
+                                </a>
+                            </p>
+                            <ul>
+                                <li>
+                                    Demand letter
+                                </li>
+                                <li>
+                                    Power of Attorney
+                                </li>
+                            </ul>
+                            <p>
+                                Above all documents required are auto generated through e-migrate system.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-xl-8 col-lg-8 col-sm-8 py-5 animate__animated animate__bounce animate__fadeInDown">
-                    <div class="contact-form" style="background-color: #a0dea7; padding: 20px;">
-                        <div class="column mcb-column mcb-item-04q251sx2 one column_column">
-                            <div class="column_attr clearfix align_center animate fadeInUp" data-anim-type="fadeInUp"
-                                style="background-image:url({{ asset('data/home_elearning_sep.png') }});background-repeat:no-repeat;background-position:center bottom;">
-                                <strong>
-                                    <h2>Employer <span class="color3">Form</span></h2>
-                                    <h3 style="color:#00CE55;">
-                                        <font style="vertical-align: inherit;">
-                                            <font style="vertical-align: inherit;">
-                                                Post a job
-                                            </font>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="billing_details ship_different_address">
+                        <div class="billing_title ship_different_address_title">
+                            <h2>Employer Application Form<span class="fa fa-check"></span></h2>
+                            <h6>
+                                <br>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit; font-size: 20px;">
+                                        Post a job
+                                    </font>
+                                </font>
+                                <span style="color:#f7931E;">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit; font-size: 20px;">
+                                            and hire talent worker.
                                         </font>
-                                        <span style="color:#f7931E;">
-                                            <font style="vertical-align: inherit;">
-                                                <font style="vertical-align: inherit;">
-                                                    and hire talent worker.
-                                                </font>
-                                            </font>
-                                        </span>
-                                    </h3>
-                                </strong>
-                            </div>
+                                    </font>
+                                </span>
+                            </h6>
                         </div>
-                        <br>
-                        <form autocomplete="off" method="POST" action="{{ route('employer.store') }}" id="create-form">
+
+                        <form class="billing_details_form" autocomplete="off" method="POST"
+                            action="{{ route('employer.store') }}" id="create-form">
                             @csrf
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Company Name</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('company_name') is-invalid @enderror"
@@ -149,7 +163,7 @@
                                 </div>
 
                                 <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Type of Company</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('company_type') is-invalid @enderror"
@@ -164,7 +178,7 @@
                                 </div>
 
                                 <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Company Email Address</label>
                                         <input type="email" class="form-control @error('email') is-invalid @enderror"
                                             placeholder="Company Email Address" name="email" value="{{ old('email') }}">
@@ -177,7 +191,7 @@
                                 </div>
 
                                 <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Company Phone Number</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('phone') is-invalid @enderror"
@@ -191,7 +205,7 @@
                                 </div>
 
                                 <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Company Website</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('website') is-invalid @enderror"
@@ -204,8 +218,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-12 col-md-12 col-sm-12 col-lg-12">
-                                    <div class="form-group">
+                                <div class="col-xl-4 col-md-4 col-sm-4 col-lg-12">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Company Location</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('location') is-invalid @enderror"
@@ -219,8 +233,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                <div class="col-xl-4 col-md-4 col-sm-12 col-lg-6">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Job Category</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('job_category') is-invalid @enderror"
@@ -234,8 +248,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-6 col-md-6 col-sm-12 col-lg-6">
-                                    <div class="form-group">
+                                <div class="col-xl-4 col-md-4 col-sm-12 col-lg-6">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Age Limit: 20-40</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('age_limit') is-invalid @enderror"
@@ -250,10 +264,11 @@
                                 </div>
 
 
-                                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-6">
-                                    <div class="form-group">
-                                        <label for="nameInput" class="form-label">Educational
-                                            Requirement</label>
+                                <div class="col-xl-12 col-md-12 col-lg-12 col-sm-6">
+                                    <div class="form-group ship_different_input">
+                                        <label for="nameInput" class="form-label">
+                                            Educational Requirement
+                                        </label>
                                         <textarea class="form-control @error('educational_requirement') is-invalid @enderror" name="educational_requirement"
                                             placeholder="Educational Requirement">{{ old('educational_requirement') }}</textarea>
                                         @error('educational_requirement')
@@ -264,13 +279,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-6">
-                                    <div class="form-group">
+                                <div class="col-xl-12 col-md-12 col-lg-12 col-sm-6">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">
-                                            Working Experience Requirement
+                                            Working Experience
                                         </label>
                                         <textarea class="form-control @error('working_experience_requirement') is-invalid @enderror"
-                                            name="working_experience_requirement" placeholder="Working Experience Requirement">{{ old('working_experience_requirement') }}</textarea>
+                                            name="working_experience_requirement" placeholder="Working Experience">{{ old('working_experience_requirement') }}</textarea>
                                         @error('working_experience_requirement')
                                             <div class="help-block with-errors text-danger">
                                                 {{ $message }}
@@ -279,12 +294,13 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-4 col-md-4 col-lg-4 col-sm-6">
-                                    <div class="form-group">
-                                        <label for="nameInput" class="form-label">Other Additional
-                                            Requirement</label>
+                                <div class="col-xl-12 col-md-12 col-lg-12 col-sm-6">
+                                    <div class="form-group billing_input_box">
+                                        <label for="nameInput" class="form-label">
+                                            Other Additional
+                                        </label>
                                         <textarea class="form-control @error('other_additional_requirement') is-invalid @enderror"
-                                            name="other_additional_requirement" placeholder="Other Additional Requirement">{{ old('other_additional_requirement') }}</textarea>
+                                            name="other_additional_requirement" placeholder="Other Additional">{{ old('other_additional_requirement') }}</textarea>
                                         @error('other_additional_requirement')
                                             <div class="help-block with-errors text-danger">
                                                 {{ $message }}
@@ -293,8 +309,8 @@
                                     </div>
                                 </div>
 
-                                <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
-                                    <div class="form-group">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Estimate Salary Offer</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('estimate_salary_offer') is-invalid @enderror"
@@ -308,9 +324,8 @@
                                     </div>
                                 </div>
 
-
-                                <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
-                                    <div class="form-group">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Other Allowance</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('other_allowance') is-invalid @enderror"
@@ -324,9 +339,8 @@
                                     </div>
                                 </div>
 
-
-                                <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
-                                    <div class="form-group">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">
                                             Gender: M/10, F/10
                                         </label>
@@ -342,8 +356,8 @@
                                 </div>
 
 
-                                <div class="col-xl-3 col-md-3 col-lg-3 col-sm-12">
-                                    <div class="form-group">
+                                <div class="col-xl-6 col-md-6 col-lg-6 col-sm-12">
+                                    <div class="form-group billing_input_box">
                                         <label for="nameInput" class="form-label">Interview Type</label>
                                         <input autocomplete="off" type="text"
                                             class="form-control @error('interview_type') is-invalid @enderror"
@@ -358,18 +372,17 @@
                                 </div>
 
                                 <div class="col-md-12 py-2">
-                                    <button type="submit" class="btn btn-default">
-                                        Submit
+                                    <button type="submit" class="thm-btn contact-five__btn">
+                                        Submit Now
                                     </button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
+    </section>
 @endsection
 @section('script')
     {!! JsValidator::formRequest('App\Http\Requests\StoreEmployer', '#create-form') !!}
