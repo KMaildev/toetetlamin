@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 24, 2023 at 06:23 AM
+-- Generation Time: Aug 16, 2023 at 05:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `yunnadioo`
+-- Database: `tottetlamin`
 --
 
 -- --------------------------------------------------------
@@ -36,6 +36,14 @@ CREATE TABLE `activities` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `activities`
+--
+
+INSERT INTO `activities` (`id`, `title`, `description`, `images`, `categorie_id`, `created_at`, `updated_at`) VALUES
+(1, 'Construction ', 'BCA- Fresh workers ', 'https://blessinglightservices.com/admin/uploads/files/q9vn0hkgtya245f.jpg,https://blessinglightservices.com/admin/uploads/files/dhpq74mrweyosxu.jpg,https://blessinglightservices.com/admin/uploads/files/q9vn0hkgtya245f.jpg,https://blessinglightservices.com/admin/uploads/files/dhpq74mrweyosxu.jpg,https://blessinglightservices.com/admin/uploads/files/q9vn0hkgtya245f.jpg,https://blessinglightservices.com/admin/uploads/files/dhpq74mrweyosxu.jpg,https://blessinglightservices.com/admin/uploads/files/q9vn0hkgtya245f.jpg,https://blessinglightservices.com/admin/uploads/files/dhpq74mrweyosxu.jpg', '1', NULL, NULL),
+(2, 'Construction ', 'BCA- Fresh workers ', 'https://blessinglightservices.com/admin/uploads/files/q9vn0hkgtya245f.jpg,https://blessinglightservices.com/admin/uploads/files/dhpq74mrweyosxu.jpg', '1', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -97,8 +105,9 @@ CREATE TABLE `countries` (
 --
 
 INSERT INTO `countries` (`id`, `country`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'Thailand', 'https://cdn-icons-png.flaticon.com/128/197/197374.png', NULL, NULL),
-(2, 'Malaysia', 'https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/05/dreamstime_l_188315611.60ad62ffa3d7a.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630', NULL, NULL);
+(1, 'Thailand', 'https://static.wixstatic.com/media/967bb4_394276a45ce74774ada8c5fe93201e7c~mv2.jpeg/v1/fill/w_129,h_129,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/thailand.jpeg', NULL, NULL),
+(2, 'Malaysia', 'https://static.wixstatic.com/media/967bb4_9a4e2aad563f437a80481c1816b6daba~mv2.jpeg/v1/fill/w_129,h_129,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/malaysia.jpeg', NULL, NULL),
+(3, 'Japan', 'https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002487/img/basic/a0002487_main.jpg?20230106161700', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -180,14 +189,8 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `title`, `photo`, `countrie_id`, `created_at`, `updated_at`) VALUES
-(1, 'MANUFACTURING', 'https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/05/dreamstime_l_188315611.60ad62ffa3d7a.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630', '1', NULL, NULL),
-(2, 'FACTORY', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZhig4SrYZDKp3ygkQjX8A84aZQTbGCqrFA&usqp=CAU', '1', NULL, NULL),
-(3, 'MANUFACTURING', 'https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/05/dreamstime_l_188315611.60ad62ffa3d7a.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630', '1', NULL, NULL),
-(4, 'FACTORY', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZhig4SrYZDKp3ygkQjX8A84aZQTbGCqrFA&usqp=CAU', '1', NULL, NULL),
-(5, 'MANUFACTURING', 'https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/05/dreamstime_l_188315611.60ad62ffa3d7a.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630', '1', NULL, NULL),
-(6, 'FACTORY', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZhig4SrYZDKp3ygkQjX8A84aZQTbGCqrFA&usqp=CAU', '1', NULL, NULL),
-(7, 'MANUFACTURING', 'https://img.ehstoday.com/files/base/ebm/ehstoday/image/2021/05/dreamstime_l_188315611.60ad62ffa3d7a.png?auto=format,compress&fit=fill&fill=blur&w=1200&h=630', '1', NULL, NULL),
-(8, 'FACTORY', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZhig4SrYZDKp3ygkQjX8A84aZQTbGCqrFA&usqp=CAU', '1', NULL, NULL);
+(1, 'Construction', 'https://cdn-icons-png.flaticon.com/128/11498/11498169.png', '1', NULL, NULL),
+(2, 'Restaurant', 'https://cdn-icons-png.flaticon.com/128/2098/2098318.png', '1', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -269,8 +272,7 @@ CREATE TABLE `teams` (
 --
 
 INSERT INTO `teams` (`id`, `name`, `photo`, `position`, `created_at`, `updated_at`) VALUES
-(1, 'Mg Mg', 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=718', 'MD', NULL, NULL),
-(2, 'Mg Mg', 'https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=718', 'MD', NULL, NULL);
+(1, 'Mg Mg Soe', 'https://blessinglightservices.com/assets/images/md.jpg', 'MD', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -288,6 +290,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@gmail.com', NULL, '$2y$10$eQ3bVYxCh8p1lnH4F3Q9/Ok8fX7zmMx64BmlCk73mjvaC7nzTRa9e', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -383,7 +392,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `activities`
 --
 ALTER TABLE `activities`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -401,7 +410,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `countries`
 --
 ALTER TABLE `countries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `cvs`
@@ -425,7 +434,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -443,13 +452,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
