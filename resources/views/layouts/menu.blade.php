@@ -96,7 +96,7 @@
 
                                 <li class="current">
                                     <a href="{{ route('ceo_message') }}">
-                                        President's Message
+                                        Who We Are
                                     </a>
                                 </li>
 
