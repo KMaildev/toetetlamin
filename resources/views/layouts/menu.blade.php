@@ -115,6 +115,22 @@
                                     </a>
                                 </li>
 
+
+                                <li class="dropdown current">
+                                    <a href="javascript::void(0)">
+                                        Countries
+                                    </a>
+                                    <ul class="sub-menu">
+                                        @foreach ($countries as $country)
+                                            <li>
+                                                <a href="{{ route('job.show', $country->id) }}">
+                                                    {{ $country->country ?? '' }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+
                                 <li class="current">
                                     <a href="{{ route('cv.index') }}">
                                         Job Application

@@ -2,7 +2,7 @@
 @section('title', 'Activities')
 @section('content')
     <section class="page-header">
-        <div class="page-header-bg" style="background-image: url(https://www.libertyinsurance.in/images/careers-banner.jpg)">
+        <div class="page-header-bg" style="background-image: url({{ asset('data/activities_banner.webp') }})">
         </div>
         <div class="container">
             <div class="page-header__inner">
