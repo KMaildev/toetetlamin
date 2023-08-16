@@ -88,17 +88,26 @@
                                     </a>
                                 </li>
 
-                                <li class="current">
-                                    <a href="{{ route('about.index') }}">
-                                        Our Company
+                                <li class="dropdown current">
+                                    <a href="javascript::void(0)">
+                                        About Us
                                     </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{ route('about.index') }}">
+                                                Our Company
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="{{ route('ceo_message') }}">
+                                                Who We Are
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
 
-                                <li class="current">
-                                    <a href="{{ route('ceo_message') }}">
-                                        Who We Are
-                                    </a>
-                                </li>
+
 
                                 <li class="current">
                                     <a href="{{ route('team') }}">
@@ -116,6 +125,21 @@
                                     <a href="{{ route('employer.index') }}">
                                         Employers
                                     </a>
+                                </li>
+
+                                <li class="dropdown current">
+                                    <a href="javascript::void(0)">
+                                        Gallery & Activities
+                                    </a>
+                                    <ul class="sub-menu">
+                                        @foreach ($categories as $category)
+                                            <li>
+                                                <a href="{{ route('activities.show', $category->id) }}">
+                                                    {{ $category->title ?? '' }}
+                                                </a>
+                                            </li>
+                                        @endforeach
+                                    </ul>
                                 </li>
 
                                 <li class="current">
